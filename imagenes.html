@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Imagen con Flecha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo2.jpg" alt="GatosFelices Logo" class="img">
+        <h1>Black Cat - Adopción de Gatos</h1>
+    </header>
+
+    <nav class="navbar" id="myNavbar">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="index.html"><img src="./images/home.png" alt="Icono home"></a>
+        <a href="imagenes.html"><img src="./images/imagenes.png" alt="Icono imagenes"></a>
+        <a href="contact.html"><img src="./images/info.png" alt="Icono contact"></a>
+    </nav>
+
+    <div id="contenedor">
+        <img id="imagen" class="fotoGato" src="./images/gato1.jpg" alt="Imagen del gato">
+        <div id="nombreGato">Simba</div>
+        <div class="flechas">
+            <div class="flecha" onclick="cambiarNombre(-1)"><img src="./images/flecha.png" alt="Flecha derecha"></div>
+            <div class="flecha" onclick="cambiarNombre(1)"><img src="./images/flecha2.png" alt="Flecha izquierda"></div>
+        </div>
+    </div>
+
+    <div class="formulario">
+
+        <h1>Formulario de Adopción de Gatos</h1>
+
+        <form id="miFormulario">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="tipoGato">Gato:</label>
+            <select id="tipoGato" name="tipoGato">
+        <option ></option>
+        <option >Simba</option>
+        <option >Nala</option>
+        <option >Oliver</option>
+        <option >Miguel</option>
+        <option >Coco</option>
+ 
+      </select>
+
+            <button type="submit" onclick="enviar()" alt="boton enviar">Enviar</button>
+            <button class="botonBorrar" type="button" onclick="borrarFormulario()" alt="boton borrar">Borrar</button>
+        </form>
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
